@@ -37,8 +37,8 @@ const CustomerReviews = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="h-20 w-20 text-[#1788ae]"/>
-          <CarouselNext className="h-20 w-20  text-[#1788ae]"/>
+          <CarouselPrevious className="h-10 w-10 md:h-20 md:w-20 text-[#1788ae]"/>
+          <CarouselNext className="h-10 w-10 md:h-20 md:w-20  text-[#1788ae]"/>
         </Carousel>
       </div>
     </section>

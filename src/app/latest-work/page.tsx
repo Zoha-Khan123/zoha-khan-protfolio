@@ -4,7 +4,7 @@ import Project from '../components/project-props/project';
 
 const LatestWork = () => {
   return (
-    <section id="latest-work" className='mt-2 relative'>
+    <section id="latest-work" className='mt-2 relative overflow-hidden'>
 
     {/* Heading */}
     <div className="flex flex-col justify-center items-center relative">
