@@ -10,7 +10,7 @@ export default function Home() {
    <Navbar></Navbar>
    <Main></Main>
    <LatestWork></LatestWork>
-   <CustomerReviews></CustomerReviews>
+   {/* <CustomerReviews></CustomerReviews> */}
    <ContactUs></ContactUs>
   </>
   );
