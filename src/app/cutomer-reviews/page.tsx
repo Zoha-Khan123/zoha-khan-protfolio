@@ -23,7 +23,7 @@ const CustomerReviews = () => {
 
       {/* Carousel */}
       <div className="flex justify-center">
-        <Carousel className="w-4/5 md:bg-red-500 lg:bg-blue-500 xl:w-3/5 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]">
+        <Carousel className="w-4/5 xl:w-3/5 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]">
           <CarouselContent>
             {reviewsData.map((reviews, index) => (
               <CarouselItem key={index}>

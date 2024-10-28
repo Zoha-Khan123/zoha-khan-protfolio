@@ -9,6 +9,7 @@ import {
   Twitter,
 } from "../components/svgs";
 import MatterCanvas from "../components/matter/matters";
+import SocialLinks from "../components/social-links/links";
 
 export default function Main() {
   return (
@@ -42,38 +43,7 @@ export default function Main() {
         </div>
 
         {/* Social Media Links List */}
-        <div>
-          <ul className="flex flex-col gap-5 text-[#b0b2c3] m-4">
-            <li>
-              <Link
-                href="https://www.linkedin.com/in/zoha-khan-developer/"
-                target="_blank"
-              >
-                <Linkedin className="w-8 hover:text-white" />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/dashboard" target="_blank">
-                <Github className="w-8 hover:text-white" />
-              </Link>
-            </li>
-            <li>
-              <Link href="mailto:zohakhan11004@gmail.com" target="_blank">
-                <Email className="w-8 hover:text-white" />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.instagram.com/" target="_blank">
-                <Instagram className="w-8 hover:text-white" />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.twitter.com/" target="_blank">
-                <Twitter className="w-8 hover:text-white" />
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <SocialLinks></SocialLinks>
       </main>
 
       <footer className="z-10 relative flex justify-center -mt-28 after:content-[''] after:absolute after:w-[2px] after:h-6 after:top-[95px] after:bg-[#4444]">

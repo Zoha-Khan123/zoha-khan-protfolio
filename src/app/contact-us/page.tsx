@@ -15,7 +15,7 @@ const ContactUs = () => {
           <div className="w-full md:w-[50%]">
             <Image
               className=" min-w-40 w-full"
-              src={`/cont.png`}
+              src={`/contact-me.svg`}
               width={600}
               height={600}
               alt="contact-image"
@@ -39,7 +39,7 @@ const ContactUs = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1788ae] dark:focus:border-[#1788ae]"
+                  className="bg-gray-700 border-2 outline-none border-gray-500 text-white text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1788ae] dark:focus:border-[#1788ae]"
                   placeholder="Enter your name"
                 />
               </div>
@@ -57,7 +57,7 @@ const ContactUs = () => {
                   type="text"
                   id="email"
                   name="email"
-                  className="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1788ae] dark:focus:border-[#1788ae]"
+                  className="bg-gray-700 border-2 outline-none border-gray-500 text-white text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1788ae] dark:focus:border-[#1788ae]"
                   placeholder="name@flowbite.com"
                 />
               </div>
@@ -72,7 +72,7 @@ const ContactUs = () => {
                   rows={8}
                   id="message"
                   name="message"
-                  className="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-2 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1788ae] dark:focus:border-[#1788ae]"
+                  className="bg-gray-700 border-2 outline-none border-gray-500 text-white text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-2 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1788ae] dark:focus:border-[#1788ae]"
                   placeholder="Type your message here"
                 />
               </div>

@@ -25,8 +25,8 @@ export { default as White } from "./white-logo.svg";
 export { default as LinkArrow } from "./external-link.svg";
 export {default as ContactUser } from "./user.svg"
 
-
-
+//not use
+// export {default as ContactMe} from "./contact-me.svg"
 
 
 
