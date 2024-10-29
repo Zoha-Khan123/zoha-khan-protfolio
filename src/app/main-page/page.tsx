@@ -10,6 +10,8 @@ import {
 } from "../components/svgs";
 import MatterCanvas from "../components/matter/matters";
 import SocialLinks from "../components/social-links/links";
+import { AlertDialogDemo } from "../about/page";
+import { Button } from "react-scroll";
 
 export default function Main() {
   return (
@@ -35,10 +37,7 @@ export default function Main() {
             <p className="pointer-events-none font-['Merriweather'] text-lg italic my-4">
               Full Stack Developer
             </p>
-            <button className="bg-[#4595eb] py-2 px-6 rounded font-extrabold text-base bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group">
-              About Me
-              <Arrow className="absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100" />
-            </button>
+            <AlertDialogDemo></AlertDialogDemo>
           </div>
         </div>
 

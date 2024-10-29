@@ -14,6 +14,7 @@ export default function Home() {
    <CustomerReviews></CustomerReviews>
    <ContactUs></ContactUs>
    <Footer></Footer>
+
   </>
   );
 }
