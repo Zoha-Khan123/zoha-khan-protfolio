@@ -10,7 +10,7 @@ import {
 } from "../components/svgs";
 import MatterCanvas from "../components/matter/matters";
 import SocialLinks from "../components/social-links/links";
-import { AlertDialogDemo } from "../about/page";
+import AlertDialogDemo  from "../about/page";
 import { Button } from "react-scroll";
 
 export default function Main() {

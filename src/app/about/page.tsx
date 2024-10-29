@@ -15,7 +15,7 @@ import { Arrow } from "../components/svgs";
 import Image from "next/image"
 import { TooltipDemo } from "../components/tooltip/tooltip";
 
-export function AlertDialogDemo() {
+export default function AlertDialogDemo() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
