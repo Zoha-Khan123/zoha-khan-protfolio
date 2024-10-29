@@ -18,7 +18,7 @@ import { TooltipDemo } from "../components/tooltip/tooltip";
 export function AlertDialogDemo() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger>
+      <AlertDialogTrigger asChild>
         <Button
           variant="outline"
           className="bg-[#4595eb] py-2 px-6 rounded font-extrabold text-base bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative border-none hover:scale-110 ease-in-out duration-100 group"
