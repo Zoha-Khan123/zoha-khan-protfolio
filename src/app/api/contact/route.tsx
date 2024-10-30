@@ -11,6 +11,15 @@ export async function POST(req: Request) {
     // Connect to the database
     await connectDB();
 
+    // Check if a message with the same email already exists
+    const existingContact = await Contact.findOne({ email });
+    if (existingContact) {
+      return NextResponse.json({
+        msg: ["A message from this email has already been sent."],
+        success: false,
+      });
+    }
+
     // Create the document
     const newContact = await Contact.create({ fullname, email, message });
     console.log("Document created:", newContact);
