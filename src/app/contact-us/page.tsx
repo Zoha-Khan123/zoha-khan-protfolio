@@ -1,8 +1,39 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { ContactUser, Email } from "../components/svgs";
 
 const ContactUs = () => {
+  const [fullname , setFullname] = useState('');
+  const [email , setEmail] = useState('');
+  const [message , setMessage] = useState('');
+  const [error , setError] = useState([]);
+
+  const handleSubmit = async (e:any) => {
+   e.preventDefault();
+   console.log(fullname);
+   console.log(email);
+   console.log(message);
+   
+   
+
+   const res = await fetch("api/contact",{
+    method:"POST" ,
+    headers:{
+      "Content-type":"application/json"
+    },
+    body:JSON.stringify({
+      fullname,
+      email,
+      message,
+    })
+
+   })
+   const {msg} = await res.json();
+   setError(msg)
+   console.log(error);
+   
+  }
   return (
     <div>
       <section className="px-4">
@@ -24,7 +55,7 @@ const ContactUs = () => {
 
           {/* Right-Side */}
           <div className="w-full md:w-[50%]">
-            <form className=" max-w-lg mx-auto">
+            <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
               <label
                 htmlFor="name"
                 className="block mb-2 text-sm font-medium  dark:text-white"
@@ -36,6 +67,8 @@ const ContactUs = () => {
                   <ContactUser className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 </div>
                 <input
+                onChange={(e)=>setFullname(e.target.value)}
+                value={fullname}
                   type="text"
                   id="name"
                   name="name"
@@ -54,6 +87,8 @@ const ContactUs = () => {
                   <Email className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 </div>
                 <input
+                 onChange={(e)=>setEmail(e.target.value)}
+                 value={email}
                   type="text"
                   id="email"
                   name="email"
@@ -69,6 +104,8 @@ const ContactUs = () => {
               </label>
               <div className="relative mb-4">
                 <textarea
+                onChange={(e)=>setMessage(e.target.value)}
+                value={message}
                   rows={8}
                   id="message"
                   name="message"
@@ -83,8 +120,21 @@ const ContactUs = () => {
                 Send
               </button>
             </form>
+
           </div>
         </div>
+
+        <div className="bg-slate-100 flex flex-col">
+  {error && error.map((e, index) => {
+    return (
+      <div key={index} className="text-red-600 px-5 py-2">
+        {e}
+      </div>
+      );
+  })}
+</div>
+
+
       </section>
     </div>
   );
