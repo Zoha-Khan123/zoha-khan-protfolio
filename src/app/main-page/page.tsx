@@ -15,6 +15,7 @@ import { Button } from "react-scroll";
 
 export default function Main() {
   return (
+    <section id="navbar-logo">
     <div className="min-h-screen flex flex-col overflow-hidden">
       <main className="flex justify-between items-center h-screen font-['Nunito'] relative z-10">
         <div className="hidden sm:block">
@@ -22,7 +23,7 @@ export default function Main() {
         </div>
         <div className="max-w-screen-xl mx-auto w-full">
           <div className="flex justify-center items-center h-auto">
-            <Image
+             <Image
               src="/blue-logo.png"
               width={200}
               height={200}
@@ -55,5 +56,6 @@ export default function Main() {
         </button>
       </footer>
     </div>
+    </section>
   );
 }
