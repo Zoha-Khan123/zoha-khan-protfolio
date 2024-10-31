@@ -29,6 +29,14 @@ export {default as ContactUser } from "./user.svg"
 //not use
 // export {default as ContactMe} from "./contact-me.svg"
 
+// export { default as Html } from "./html.svg"
+// export { default as Css } from "./css.svg"
+// export { default as Javascript } from "./javascript.svg"
+// export { default as Typescript } from "./typescript.svg"
+// export { default as Firebase } from "./Firebase.svg"
+// export { default as Git } from "./Git.svg"
+// export { default as Nextjs } from "./Next.js.svg"
+// export { default as Node } from "./node.svg"
 
 
 

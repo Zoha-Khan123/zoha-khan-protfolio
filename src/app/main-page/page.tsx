@@ -42,7 +42,7 @@ export default function Main() {
         </div>
 
         {/* Social Media Links List */}
-        <SocialLinks></SocialLinks>
+        <SocialLinks height="8" width="8"></SocialLinks>
       </main>
 
       <footer className="z-10 relative flex justify-center -mt-28 after:content-[''] after:absolute after:w-[2px] after:h-6 after:top-[95px] after:bg-[#4444]">

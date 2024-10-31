@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SocialLinks from "../components/social-links/links";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,9 +9,12 @@ const Footer = () => {
         <h1>Zoha Khan @ 2024</h1>
       </div>
       <div className="py-2">
+        <Link href="#">
         <Image src="/blue-logo.png" width={50} height={50} alt="logo" />
+        </Link>
       </div>
-        <SocialLinks direction="row" />
+      <SocialLinks direction="row" />
+
      
     </footer>
   );

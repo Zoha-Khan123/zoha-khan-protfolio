@@ -16,6 +16,7 @@ import Image from "next/image"
 import { TooltipDemo } from "../components/tooltip/tooltip";
 
 export default function AlertDialogDemo() {
+  const tags = ["HTML", "CSS", "JavaScript", "TypeScript", "Tailwind", "Next.js", "Firebase", "Git", "Node.js"];
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
@@ -44,12 +45,11 @@ export default function AlertDialogDemo() {
         est accusantium quis cumque sit quam tempora voluptate vitae.
       </p>
       <ul className="flex flex-wrap mt-2 gap-2">
-        <li className="border-2 rounded-full  w-fit px-2 text-xs md:text-sm">#HTML</li>
-        <li className="border-2 rounded-full  w-fit px-2 text-xs md:text-sm">#CSS</li>
-        <li className="border-2 rounded-full  w-fit px-2 text-xs md:text-sm">#Javascript</li>
-        <li className="border-2 rounded-full  w-fit px-2 text-xs md:text-sm">#Typescript</li>
-        <li className="border-2 rounded-full  w-fit px-2 text-xs md:text-sm">#Tailwind</li>
-        <li className="border-2 rounded-full  w-fit px-2 text-xs md:text-sm">#Next.js</li>
+      {tags.map((tag) => (
+      <li key={tag} className="border-2 rounded-full w-fit px-2 text-xs md:text-sm">
+        #{tag}
+      </li>
+    ))}
       </ul>
     </div>
 

@@ -11,16 +11,27 @@ export async function POST(req: Request) {
     // Connect to the database
     await connectDB();
 
-    // Check if a message with the same email already exists
-    const existingContact = await Contact.findOne({ email });
-    if (existingContact) {
+    // Define the time window and message limit
+    const timeWindow = 5 * 60 * 1000; // 5 minutes in milliseconds
+    const messageLimit = 3;
+
+    // Calculate the timestamp for the beginning of the time window
+    const startTime = new Date(Date.now() - timeWindow);
+
+    // Find messages from the same email within the last 5 minutes
+    const recentMessages = await Contact.find({
+      email,
+      createdAt: { $gte: startTime },
+    }).limit(messageLimit); // Limit the number of returned documents for efficiency
+
+    if (recentMessages.length >= messageLimit) {
       return NextResponse.json({
-        msg: ["A message from this email has already been sent."],
+        msg: ["You have reached the max limit of messages. Try again after 5 minutes."],
         success: false,
       });
     }
 
-    // Create the document
+    // Create a new message document
     const newContact = await Contact.create({ fullname, email, message });
     console.log("Document created:", newContact);
 
