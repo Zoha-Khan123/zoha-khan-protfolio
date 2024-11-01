@@ -19,7 +19,7 @@ export default function AlertDialogDemo() {
     "Tailwind",
     "Next.js",
     "Firebase",
-    "Git",
+    "Github",
     "Node.js",
   ];
   return (
@@ -47,9 +47,7 @@ export default function AlertDialogDemo() {
               About Me
             </h1>
             <p className="text-sm md:text-base leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-              tenetur ad qui debitis ut sunt voluptates sit soluta eaque? Harum
-              non, est accusantium quis cumque sit quam tempora voluptate vitae.
+            Hi! I’m a passionate Frontend Developer with 1 year of experience creating responsive and user-friendly web applications. I specialize in HTML, CSS, JavaScript, TypeScript, Tailwind CSS, and Next.js.I’m constantly exploring new technologies and love building projects that merge design with development. 
             </p>
             <ul className="flex flex-wrap mt-2 gap-2">
               {tags.map((tag) => (
