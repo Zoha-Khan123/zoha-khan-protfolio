@@ -24,16 +24,16 @@ const Project = ({ project , index }: { project: ProjectType; index: number  }) 
 
   return (
     
-    <div className="flex flex-col sm:flex-row gap-24 mt-24 sm:mt-28 w-full lg:w-[85%] h-full m-auto relative">
+    <div className="flex flex-col md:flex-row gap-24 mt-24 md:mt-28 w-full lg:w-[85%] h-full m-auto relative">
       {/* Left Side */}
-      <div className="w-full sm:w-[50%]">
+      <div className="w-full md:w-[50%]">
          {/* Connecting Line */}
-         <div className="sm:h-[1px] left-1/4 right-1/2  bg-[#1788ae] absolute top-1/2"></div>
+         <div className="md:h-[1px] left-1/4 right-1/2  bg-[#1788ae] absolute top-1/2"></div>
          {/* Round Circle */}
-         <div className={`sm:w-4 h-4 rounded-full sm:border-[3px] ${borderColor[index]} absolute left-1/2  top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100`}></div>
+         <div className={`md:w-4 h-4 rounded-full md:border-[3px] ${borderColor[index]} absolute left-1/2  top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100`}></div>
          <Link href={project.vercelUrl} target="blank" className="flex justify-center w-full relative">
-        <div className="relative group hover:scale-105 sm:hover:scale-110 ease-in-out duration-100">
-       <span className={`flex ${bgColor[index]} ${hoverColor[index]} font-extrabold p-2 absolute -bottom-14 sm:relative sm:top-10 left-1/2 -translate-x-1/2 sm:bottom-auto translate-y-0 rounded w-max items-center gap-1 after:content-[' '] sm:after:w-5 after:h-5 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2  sm:group-hover:-top-5 ease-jump duration-200`}>
+        <div className="relative group hover:scale-105 md:hover:scale-110 ease-in-out duration-100">
+       <span className={`flex ${bgColor[index]} ${hoverColor[index]} font-extrabold p-2 absolute -bottom-14 md:relative md:top-10 left-1/2 -translate-x-1/2 md:bottom-auto translate-y-0 rounded w-max items-center gap-1 after:content-[' '] md:after:w-5 after:h-5 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2  md:group-hover:-top-5 ease-jump duration-200`}>
        {project.projectName}<LinkArrow />
        </span>
         <Image src={project.imageUrl} width={400} height={400} alt="project-image" className="relative drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"></Image>
@@ -43,7 +43,7 @@ const Project = ({ project , index }: { project: ProjectType; index: number  }) 
         
       
       {/* Right Side */}
-      <div className="w-full px-8 md:px-0 mt-8 sm:w-[50%] ">
+      <div className="w-full px-8 lg:px-0 mt-8 md:w-[50%] ">
         {/* Conditional text-color */}
         <h1 className={`text-3xl font-bold ${textColor[index]}`}>
         {project.projectNum}

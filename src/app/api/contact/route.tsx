@@ -8,6 +8,23 @@ export async function POST(req: Request) {
     const { fullname, email, message } = await req.json();
     console.log("Received data:", { fullname, email, message });
 
+    // Preliminary validation for required fields
+    const validationErrors: string[] = [];
+    if (!fullname) validationErrors.push("Name is required");
+    if (!email) validationErrors.push("Email is required");
+    if (!message) validationErrors.push("Message is required");
+
+    // Additional check for email format
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    if (email && !emailRegex.test(email)) {
+      validationErrors.push("Please enter a valid email address.");
+    }
+
+    // If there are validation errors, return them immediately
+    if (validationErrors.length > 0) {
+      return NextResponse.json({ msg: validationErrors, success: false });
+    }
+
     // Connect to the database
     await connectDB();
 

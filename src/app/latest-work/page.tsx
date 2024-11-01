@@ -27,7 +27,7 @@ const LatestWork = () => {
     </div>
     
     {/* Vertical Line */}
-    <div className="sm:w-[2px] bg-[#1788ae] mx-auto absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
+    <div className="md:w-[2px] bg-[#1788ae] mx-auto absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
   </section>
   
   

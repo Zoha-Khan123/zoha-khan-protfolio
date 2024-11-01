@@ -38,10 +38,18 @@ const ContactUs = () => {
         message,
       }),
     });
-    const { msg } = await res.json();
+    const { msg , success } = await res.json();
     setError(msg);
     console.log(error);
+    // If submission is successful, clear the form fields
+    if (success) {
+     setFullname("");
+     setEmail("");
+     setMessage("");
   };
+
+  }
+
   return (
     <div>
       <section className="px-4">
