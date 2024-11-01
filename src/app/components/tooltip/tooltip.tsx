@@ -13,9 +13,9 @@ const tooltipItems = [
   { Icon: "/javascript.png", tooltipText: "Javascript" },
   { Icon: "/typescript.png", tooltipText: "Typescript" },
   { Icon: "/tailwind-1.png", tooltipText: "Tailwind" },
-  { Icon: "/next-js.png", tooltipText: "Next.JS" },
+  { Icon: "/next.js.png", tooltipText: "Next.JS" },
   { Icon: "/firebase.png", tooltipText: "Firebase" },
-  { Icon: "/git.png", tooltipText: "Git" },
+  { Icon: "/github.png", tooltipText: "Github" },
   { Icon: "/node-js.png", tooltipText: "Node.JS" },
 ];
 

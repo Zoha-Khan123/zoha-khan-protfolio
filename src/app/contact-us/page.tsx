@@ -20,12 +20,11 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState([]);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log(fullname);
-    console.log(email);
-    console.log(message);
+    setSuccess(false); // Reset success state
 
     const res = await fetch("api/contact", {
       method: "POST",
@@ -38,17 +37,21 @@ const ContactUs = () => {
         message,
       }),
     });
-    const { msg , success } = await res.json();
-    setError(msg);
-    console.log(error);
-    // If submission is successful, clear the form fields
-    if (success) {
-     setFullname("");
-     setEmail("");
-     setMessage("");
-  };
 
-  }
+    const data = await res.json();
+
+    // Check the response and set the error or success message
+    if (data.success) {
+      setSuccess(true); // Set success message to true
+      setError([]); // Clear any previous errors
+      setFullname(""); // Clear the form fields
+      setEmail("");
+      setMessage("");
+    } else {
+      setError(data.msg); // Display validation errors
+      setSuccess(false);
+    }
+  };
 
   return (
     <div>
@@ -57,8 +60,8 @@ const ContactUs = () => {
           <h1 className="my-8 text-3xl font-bold border border-[#1788ae] text-[#1788ae] p-2 rounded-lg">{`Let's Connect`}</h1>
         </div>
 
-        {/* Left-Side */}
         <div className="md:flex items-center">
+          {/* Left-Side */}
           <div className="w-full md:w-[50%]">
             <Image
               className=" min-w-40 w-full"
@@ -140,16 +143,16 @@ const ContactUs = () => {
                 </AlertDialogTrigger>
 
                 <AlertDialogContent className="flex flex-col justify-end w-[300px] sm:w-[400px] max-h-[200px] border rounded-lg">
-                  {error?.length > 0 &&
+                  {success ? (
+                    <div className="text-green-600 py-2">Message sent successfully!</div>
+                  ) : (
+                    error.length > 0 &&
                     error.map((e, index) => (
-                      <div
-                        key={index}
-                        className="text-red-600 py-2 bg-transparent"
-                      >
+                      <div key={index} className="text-red-600 py-2 bg-transparent">
                         {e}
                       </div>
-                    ))}
-
+                    ))
+                  )}
                   <AlertDialogFooter>
                     <AlertDialogCancel className="bg-black text-white">
                       Cancel
@@ -166,5 +169,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-
-

@@ -33,9 +33,9 @@ export default function AlertDialogDemo() {
           <Arrow className="absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100" />
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className="bg-[#111111] w-[90%] h-auto sm:w-[80%] p-4 md:p-8 rounded-lg border-[#1595b6] border-4">
+      <AlertDialogContent className="bg-[#111111] w-[90%] h-auto sm:w-[80%] p-4 md:p-8 rounded-lg border-[#4595eb] border-4">
         <div className="flex justify-end">
-          <AlertDialogCancel className="bg-[#111111] border-2 border-[#1595b6] w-12 h-12 rounded-full">
+          <AlertDialogCancel className="bg-[#111111] border-2 border-[#4595eb] w-12 h-12 rounded-full">
             <X className="w-4 h-4" />
           </AlertDialogCancel>
         </div>
