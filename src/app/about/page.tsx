@@ -18,7 +18,6 @@ export default function AlertDialogDemo() {
     "TypeScript",
     "Tailwind",
     "Next.js",
-    "Firebase",
     "Github",
     "Node.js",
   ];
@@ -47,7 +46,7 @@ export default function AlertDialogDemo() {
               About Me
             </h1>
             <p className="text-sm md:text-base leading-relaxed">
-            Hi! I’m a passionate Frontend Developer with 1 year of experience creating responsive and user-friendly web applications. I specialize in HTML, CSS, JavaScript, TypeScript, Tailwind CSS, and Next.js.I’m constantly exploring new technologies and love building projects that merge design with development. 
+            Hi! I’m a passionate Frontend Developer.I’m constantly exploring new technologies and love building projects that merge design with development. 
             </p>
             <ul className="flex flex-wrap mt-2 gap-2">
               {tags.map((tag) => (
