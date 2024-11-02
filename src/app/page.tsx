@@ -7,7 +7,7 @@ import Navbar from "./navbar/page";
 
 export default function Home() {
   return (
-   <>
+   <div className="h-screen overflow-auto scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-black">
    <Navbar></Navbar>
    <Main></Main>
    <LatestWork></LatestWork>
@@ -15,7 +15,7 @@ export default function Home() {
    <ContactUs></ContactUs>
    <Footer></Footer>
 
-  </>
+  </div>
   );
 }
 

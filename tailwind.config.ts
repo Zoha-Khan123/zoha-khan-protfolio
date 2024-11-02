@@ -65,6 +65,9 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),
+	        require("tailwind-scrollbar"), // Add scrollbar plugin here
+			],
+  
 };
 export default config;

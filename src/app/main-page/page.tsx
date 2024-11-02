@@ -28,7 +28,7 @@ export default function Main() {
               width={200}
               height={200}
               alt="logo"
-              className="pointer-events-none w-[250px] sm:w-[420px] h-auto absolute top-40 sm:top-10"
+              className="pointer-events-none w-[250px] sm:w-[420px] h-auto absolute "
             />
           </div>
           <div className="relative ml-5 sm:ml-20">
