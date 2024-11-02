@@ -103,7 +103,7 @@ const MatterCanvas = () => {
         height: '100vh',
         zIndex: -1, // Keep canvas in the background
         backgroundRepeat:"no-repeat",
-        display:"none",
+        display:"flex",
       }}
     />
   );
